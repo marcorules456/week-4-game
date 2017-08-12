@@ -96,6 +96,35 @@ if(score>goal){
 	
 
 	
+	$("#gem4").on("click", function(gemvalue){
+	
+	score+=5;
+	
+$("#currents").text(score);
+
+
+if(score>goal){
+	alert("you just lost :/");
+		lossCounter+=1;
+		 goal = Math.floor(Math.random()*300);
+		$("#scoreLose").text(lossCounter);
+		$("#goal").text(goal);
+		score=0;
+		$("#currents").text(score);
+}
+	
+	if(score==goal){
+		  alert("you did it!");
+		  winCounter+=1;
+		   goal = Math.floor(Math.random()*300);
+		  $("#scoreWin").text(winCounter);
+			$("#goal").text(goal);
+			score=0;
+			$("#currents").text(score);
+			
+	}
+	});
+	
 	
 	
 	
