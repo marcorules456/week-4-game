@@ -1,5 +1,5 @@
-
-
+var audioElement = document.createElement("audio");
+audioElement.setAttribute("src", "https://play.pokemonshowdown.com/audio/cries/roggenrola.mp3");
 var score= 0;
 var lossCounter=0;
 var winCounter=0;
@@ -14,7 +14,8 @@ $( document ).ready(function() {
 $("#gem1").on("click", function(gemvalue){
 	score+=20;
 $("#currents").text(score);
-	
+	audioElement.play();
+		
 	
 	if (score>goal){
 		alert("you just lost :/");
@@ -24,6 +25,7 @@ $("#currents").text(score);
 		$("#goal").text(goal);
 		score=0;
 		$("#currents").text(score);
+		
 	}
 	 if(score==goal){
 
@@ -39,7 +41,8 @@ $("#currents").text(score);
 	
 	});
 $("#gem2").on("click", function(gemvalue){
-	
+	audioElement.play();
+		
 	score+=3;
 $("#currents").text(score);
 
@@ -65,7 +68,8 @@ $("#currents").text(score);
 	}});
 	
 $("#gem3").on("click", function(gemvalue){
-	
+	audioElement.play();
+		
 	score+=10;
 	
 $("#currents").text(score);
@@ -97,7 +101,7 @@ if(score>goal){
 
 	
 	$("#gem4").on("click", function(gemvalue){
-	
+	audioElement.play();
 	score+=5;
 	
 $("#currents").text(score);
